@@ -1,0 +1,1031 @@
+html,body{
+  height:100%;
+  width:100%;
+}
+
+
+body{
+	margin: 0px;
+	font-family: 'Maiandra GD Black';
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  color: #fff;
+  background-color: #f0b107;
+  margin: auto;
+  margin-top: 10%;
+  border: 1px solid #f0b107;
+  width: 90%;
+  height: 30%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 1%;
+  padding-top: 1px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.PModal{
+	padding: 0%;
+	font-size: 2.2em;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+}
+
+.SecUno{
+	margin: 0 auto;
+	overflow: hidden;
+	height: 100%;
+	padding-bottom: 25%;
+	background: url(../images/fondoprincipal_w.png) no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+}
+.sec1{
+
+	color: #fff;
+	font-family: 'Maiandra GD Black';
+	font-size: 7em;
+	font-style: bold;
+	text-shadow: black 0.1em 0.1em 0.2em;
+
+	margin-top: 2%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sec1a{
+
+	color: #fff;
+	font-family: 'Maiandra GD Black';
+	font-size: 4em;
+	font-style: bold;
+	text-shadow: rgb(240, 177, 7) 1px 0px 0px, rgb(240, 177, 7) 0.540302px 0.841471px 0px, rgb(240, 177, 7) -0.416147px 0.909297px 0px, rgb(240, 177, 7) -0.989992px 0.14112px 0px, rgb(240, 177, 7) -0.653644px -0.756802px 0px, rgb(240, 177, 7) 0.283662px -0.958924px 0px, rgb(240, 177, 7) 0.96017px -0.279415px 0px; ;
+
+  margin-top: 2%;
+  margin-bottom: 3%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+@media (max-width: 480px) {
+.sec1a{
+
+	color: #fff;
+	font-family: 'Maiandra GD Black';
+	font-size: 2em;
+	font-style: bold;
+	text-shadow: rgb(240, 177, 7) 1px 0px 0px, rgb(240, 177, 7) 0.540302px 0.841471px 0px, rgb(240, 177, 7) -0.416147px 0.909297px 0px, rgb(240, 177, 7) -0.989992px 0.14112px 0px, rgb(240, 177, 7) -0.653644px -0.756802px 0px, rgb(240, 177, 7) 0.283662px -0.958924px 0px, rgb(240, 177, 7) 0.96017px -0.279415px 0px; ;
+
+	margin-top: 2%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+}
+
+.sec1pago{
+
+	color: #f1b208;
+	font-family: 'Maiandra GD Black';
+	font-size: 4em;
+	font-style: bold;
+	
+	margin-top: 2%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+@media (max-width: 480px) {
+.sec1pago{
+
+	color: #f1b208;
+	font-family: 'Maiandra GD Black';
+	font-size: 2em;
+	font-style: bold;
+	
+	margin-top: 2%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+}
+
+hr.lineapago{
+  height: 3px;
+  border: 3px solid transparent;
+  background-color: #ebdbb7;
+  
+margin-top: 0;
+margin-bottom: 0;
+box-sizing: none;
+}
+
+.parrafolema{
+	margin-top:5%;
+	margin-bottom: 4%;
+	width: 100%;
+	height: 20%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+
+
+	/*background-color: rgba(240, 177, 7, 0.5);*/
+	background-color: rgba(172, 126, 3, 0.5);
+	z-index: 8;
+
+}
+.textoparra{
+
+	font-family: 'Maiandra GD Black';
+	font-size: 20px;
+	color: #fff;
+	padding: 5%;
+	
+	text-shadow: black 0.1em 0.1em 0.2em;
+	
+}
+
+.btn-uno{
+	margin-top: 3%;
+	text-decoration:none;
+	font-weight: 600;
+	color:#ffffff;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:40px;
+	padding-right:40px;
+	background-color:#f0b107;
+	border-color: #E8AB06;
+	/*border-color: #fbdb65ff;*/
+	border-width: 8px;
+	border-style: solid;
+	border-radius: 30px;
+	font-family: 'Maiandra GD Black';
+	font-size: 30px;
+
+}
+.btn-uno:hover{
+	color:#ffffff;
+	border-color: #E8AB06;
+	
+	background-color:rgba(232, 171, 6, 0.5);
+	
+	/*border-color: #fbdb65ff;*/
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 30px;
+	 transition: all 0.2s ease;
+	
+
+}
+.btn-uno:link {
+	text-decoration:none; 
+}
+.btn-uno:visited {
+	text-decoration:none; 
+	color:#ffffff;
+}
+/*
+button:hover {
+	cursor: pointer;
+	color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px rgba(251, 219, 101, 1);
+  transition: all 0.2s ease;
+}
+*/
+/* //muestra solo la imagen movil de 1024 hacia abajo */
+@media screen and (max-width: 1024px){
+	.SecUno{
+		background: url(../images/fondoprincipal.png) no-repeat fixed center;
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+	   height: 100%;
+	   width: 100% ;
+	   text-align: center;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px){
+	.SecUno{
+		background: url(../images/fondoprincipal.png) no-repeat fixed center;
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+	   height: 100%;
+	   width: 100% ;
+	   text-align: center;
+	}
+	.sec1{
+		font-size: 9em;
+    margin-top: 5%;
+  }
+  .parrafolema{
+    height: 25%;
+  }
+	.textoparra{
+		font-size: 2em;
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+	.btn-uno{
+		margin-top: 11%;
+		font-size: 3em;
+	}
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px){
+	.SecUno{
+		background: url(../images/fondoprincipal.png) no-repeat fixed center;
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+	   height: 100%;
+	   width: 100% ;
+	   text-align: center;
+	}
+	.textoparra{
+		font-size: 28px;
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+	.sec1{
+		font-size: 9em;
+	}
+	.btn-uno{
+		margin-top: 7%;
+		font-size: 2em;
+	}
+	.PModal{
+		font-size: 1.6em;
+	}
+
+}
+
+
+@media screen and (max-width: 425px) and (min-width: 376px){
+	.SecUno{
+		background: url(../images/fondoprincipal.png) no-repeat fixed center;
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+	   height: 100%;
+	   width: 100% ;
+	   text-align: center;
+	}
+	.btn-uno{
+		margin-top: 10%;
+		font-size: 1.5em;
+	}
+	.parrafolema{
+		margin-bottom: 12%;
+	}
+
+	.PModal{
+		font-size: 123%;
+		padding-top: 0px;
+	}
+	.close{
+		font-size: 20px;
+		padding-top: 5px;
+		padding-right: 5px;
+		padding-bottom: 0px;
+	}
+	
+	
+}
+@media screen and (max-width: 375px) and (min-width: 321px){
+	.SecUno{
+		background: url(../images/fondoprincipal.png) no-repeat fixed center;
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+	   height: 100%;
+	   width: 100% ;
+	   text-align: center;
+	}
+	.sec1{
+		margin-top: 6%;
+	}
+	.textoparra{
+		font-size: 17px;
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+	.parrafolema{
+		margin-top: 10%;
+		margin-bottom: 12%;
+		
+	}
+	.btn-uno{
+		margin-top: 8%;
+		font-size: 1.5em;
+	}
+	.PModal{
+		font-size: 1.1em;
+	}
+}
+
+
+@media screen and (max-width: 320px){
+	.SecUno{
+		background: url(../images/fondoprincipal.png) no-repeat fixed center;
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+	   height: 100%;
+	   width: 100% ;
+	   text-align: center;
+	}
+	.sec1{
+		font-size: 6em !important;
+		margin-top: 20%;
+	}
+
+	.textoparra{
+		font-size: 14px;
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+	.parrafolema{
+		margin-top: 10%;
+		margin-bottom: 11%;
+	}
+	.btn-uno{
+		margin-top: 10%;
+		font-size: 1.2em;
+	}
+
+	.PModal{
+		font-size: 1.1em;
+	}
+	.close{
+		font-size: 20px;
+	}
+}
+
+hr.lineas{
+  height: 15px;
+  border: 3px solid transparent;
+  background-color: black;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(0deg, white, #4A5A5B 80%);
+  margin-top: 0;
+  margin-bottom: 0;
+  box-sizing: none;
+}
+/* line 63, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area {
+  display: block;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  /* line 63, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area {
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 63, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area {
+    padding-top: 0;
+  }
+}
+
+/* line 73, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President {
+  position: relative;
+  width: 50%;
+  float: left;
+}
+
+@media (max-width: 767px) {
+  /* line 73, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President {
+    width: 100%;
+    
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 73, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+/* line 84, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #1A0D01;
+  z-index: 8;
+  opacity: .4;
+}
+
+/* line 96, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 100, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb img {
+  width: 100%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 105, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  bottom: 60px;
+  left: 70px;
+}
+
+@media (max-width: 767px) {
+  /* line 105, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 105, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading {
+    left: 30px;
+    bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* line 105, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+/* line 124, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading span {
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-bottom: 9px;
+  display: block;
+  /*position: relative;*/
+  z-index: 8;
+}
+
+/* line 132, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading h3 {
+  font-size: 34px;
+  color: #FFFFFF;
+  /*position: relative;*/
+  z-index: 8;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  /* line 132, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading h3 {
+    font-size: 20px;
+  }
+}
+
+/* line 143, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading span {
+  font-size: 30px;
+  font-weight: 700;
+  color: #F0542C;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* line 151, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading p {
+  font-size: 16px;
+  color: #E8E8E8;
+  line-height: 28px;
+  /*position: relative;*/
+  z-index: 8;
+  margin-top: 9px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 767px) {
+  /* line 151, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading p {
+    font-size: 14px;
+    line-height: 22px;
+    z-index: 8;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 151, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading p {
+    font-size: 14px;
+    line-height: 22px;
+    z-index: 8;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 173, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading p br {
+    display: none;
+  }
+}
+
+/* line 179, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading a {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 600;
+  /*position: relative;*/
+  z-index: 8;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 767px) {
+  /* line 179, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading a {
+    padding: 6px 20px;
+    font-size: 12px;
+  }
+}
+
+/* line 191, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President .room_thumb .room_heading a:hover {
+  color: #F2C64D;
+}
+
+/* line 198, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President:hover img {
+  width: 100%;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* line 203, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.Burger_President_area .Burger_President_here .single_Burger_President:hover .room_heading a {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 29, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_btn.scss */
+.boxed-btn3 {
+  background: #F2C64D;
+  color: #fff;
+  display: inline-block;
+  padding: 18px 44px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  border: 1px solid transparent;
+  text-align: center;
+  color: #fff !important;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  padding: 9px 30px;
+  cursor: pointer;
+}
+
+/* line 47, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_btn.scss */
+.boxed-btn3:hover {
+  background: transparent;
+  color: #F2C64D !important;
+  border: 1px solid #F2C64D;
+}
+
+/* line 52, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_btn.scss */
+.boxed-btn3:focus {
+  outline: none;
+}
+
+
+.instragram_area {
+	background-color: rgb(240, 177, 7);
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  /* line 278, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .instragram_area {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* line 291, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.instragram_area .single_instagram {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  /* line 291, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .instragram_area .single_instagram {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 291, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+  .instragram_area .single_instagram {
+    width: 100%;
+  }
+}
+
+/* line 305, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.instragram_area .single_instagram img {
+  width: 100%;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 310, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.instragram_area .single_instagram .ovrelay {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  bottom: 15px;
+  background: rgba(26, 13, 1, 0.3);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  right: 15px;
+  border-radius: 50%;
+  border: 1px dashed #fff;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+/* line 326, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.instragram_area .single_instagram .ovrelay a {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* line 339, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.instragram_area .single_instagram:hover .ovrelay {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 344, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_offers.scss */
+.instragram_area .single_instagram:hover img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+#mu-map {
+  display: inline;
+  float: left;
+  height: 450px;
+  width: 100%;
+}
+
+#mu-map iframe {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 480px) {
+  #mu-map {
+    height: 350px;
+  }
+}
+@media (max-width: 360px) {
+  #mu-map {
+    height: 350px;
+  }
+}
+footer {
+	
+
+background: linear-gradient(#64096f 60%, #fff);
+
+}
+.mu-footer-social {
+  /* display: inline; */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mu-footer-social a {
+  background-color: #555;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  height: 45px;
+  line-height: 47px;
+  margin: 5px 20px;
+  text-align: center;
+  width: 45px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.mu-footer-social a:hover {
+  background-color: transparent;
+  font-size: 30px;
+  
+}
+@media screen and (max-width: 425px){
+  .mu-footer-social a{
+    margin: 5px 13px;
+  }
+}
+@media screen and (max-width: 375px){
+  .mu-footer-social a{
+    margin: 5px 8px;
+  }
+}
+@media screen and (max-width: 360px){
+  .mu-footer-social a{
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 320px){
+  .mu-footer-social a{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 42px;
+    margin: 5px;
+  }
+  .mu-footer-social a:hover{
+    font-size: 25px;
+  }
+}
+
+
+.form-control-pago {
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #e34900;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .form-control-pago {
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; } }
+  .form-control-pago::-ms-expand {
+    background-color: transparent;
+    border: 0; }
+  .form-control-pago:focus {
+    color: #e34900;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  .form-control-pago::-webkit-input-placeholder {
+    color: #6c757d;
+    opacity: 1; }
+  .form-control-pago:-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1; }
+  .form-control-pago::-ms-input-placeholder {
+    color: #e34900;
+    opacity: 1; }
+  .form-control-pago::placeholder {
+    color: #e34900;
+    opacity: 1; }
+  .form-control-pago:disabled, .form-control-pago[readonly] {
+    background-color: #e34900
+    opacity: 1; }
+
+select.form-control-pago:focus::-ms-value {
+  color: #e34900;
+  background-color: #fff; }
+
+.form-control-pago-file,
+.form-control-pago-range {
+  display: block;
+  width: 100%; }
+
+  .form-control-pago-plaintext {
+  display: block;
+  width: 100%;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0; }
+  .form-control-pago-plaintext.form-control-pago-sm, .form-control-pago-plaintext.form-control-pago-lg {
+    padding-right: 0;
+    padding-left: 0; }
+
+.form-control-pago-sm {
+  height: calc(1.8125rem + 2px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem; }
+
+.form-control-pago-lg {
+  height: calc(2.875rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem; }
+
+select.form-control-pago[size], select.form-control-pago[multiple] {
+  height: auto; }
+
+textarea.form-control-pago {
+  height: auto; }
+
+  .was-validated .form-control-pago:valid, .form-control-pago.is-valid {
+  border-color: #28a745;
+  padding-right: 2.25rem;
+  background-repeat: no-repeat;
+  background-position: center right calc(2.25rem / 4);
+  background-size: calc(2.25rem / 2) calc(2.25rem / 2);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e"); }
+  .was-validated .form-control-pago:valid:focus, .form-control-pago.is-valid:focus {
+    border-color: #28a745;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
+  .was-validated .form-control-pago:valid ~ .valid-feedback,
+  .was-validated .form-control-pago:valid ~ .valid-tooltip, .form-control-pago.is-valid ~ .valid-feedback,
+  .form-control-pago.is-valid ~ .valid-tooltip {
+    display: block; }
+
+.was-validated textarea.form-control-pago:valid, textarea.form-control-pago.is-valid {
+  padding-right: 2.25rem;
+  background-position: top calc(2.25rem / 4) right calc(2.25rem / 4); }
+  .form-control-pago {
+
+  height: 52px !important;
+  background: #fff !important;
+  color: #e34900 !important;
+  font-size: 18px;
+  border-radius: 5px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
+  .form-control-pago:focus, .form-control-pago:active {
+    border-color: #000000; }
+
+    input .form-control-pago ::placeholder {
+      color: red; font-weight: bold;
+ }
+
+textarea.form-control-pago {
+  height: inherit !important; }
+
+
+  .form-control-pago {
+
+  height: 52px !important;
+  background: #ffd388 !important;
+  color: #e34900 !important;
+  font-size: 18px;
+  border-radius: 5px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
+
+ .input-group-indicepago{
+    background-color: #ffd388;
+    border-radius: 10px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    padding: 10px 10px;
+    height: 50px; }  
+  }
+   td.input-group-total{
+
+    }
+
+  
+  

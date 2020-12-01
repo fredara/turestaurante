@@ -1,0 +1,92 @@
+#MenuPasta{
+    background-color: rgb(240, 177, 7);
+    height: 400px;
+	width: 100%;
+}
+
+#col11{
+    padding: 0px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Maiandra GD Black';
+    box-shadow: 0 6px 20px 0 rgb(0, 0, 0, 0.1);
+}
+
+/* #colHambur{
+    padding: 0px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Maiandra GD Black';
+    height: 10%;
+
+    background-image: url(../images/Categorias/HAMBURGUESAS/MENU/menu1.png);
+    
+   background-size: cover;
+
+} */
+ @media screen and (max-width:480px) {
+
+    .btnMenuPlato{
+        font-size: 12px;
+        color: rgb(240, 177, 7);;
+        background-color: #fff;
+        font-family: 'Maiandra GD Black';
+        border-radius:30px;
+        display:inline-block;
+        cursor:pointer;
+        padding:2px 11px;
+        text-decoration:none;
+    }
+
+    .btnMenuPlato:hover{
+        
+        font-size: 14px;
+        background-color:rgba(255, 255, 255, 0.5);
+        color:#ffffff;
+        border-width: 3px;
+        border-style: solid;
+        transition: all 0.2s ease;  
+        text-decoration:none;
+    }
+}
+
+.btnMenuPlato{
+
+    font-size: 22px;
+    color: rgb(240, 177, 7);;
+    background-color: #fff;
+    font-family: 'Maiandra GD Black';
+    border-radius:30px;
+    display:inline-block;
+    cursor:pointer;
+    padding:2px 11px;
+    text-decoration:none;
+    margin: 8px auto;
+}
+
+.btnMenuPlato:hover{
+    
+    font-size: 26px;
+    background-color:rgba(255, 255, 255, 0.5);
+    color:#ffffff;
+    border-width: 3px;
+    border-style: solid;
+    transition: all 0.2s ease;
+    text-decoration:none;
+}
+.btnMenuPlato:active {
+	position:relative;
+	top:1px;
+}
+
+.menu-imagen{
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.vl{
+    border-left: 1.5px solid  rgb(240, 177, 7);
+    /*box-shadow: 0 -8px 20px 2px #000;*/
+    box-shadow: 0 1px 6px 0px #000;
+    
+}

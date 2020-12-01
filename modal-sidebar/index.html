@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal para menu</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!--<link href="modal.css" rel="stylesheet" />-->
+<link href="sidebar.css" rel="stylesheet" />
+<link href="modal2.css" rel="stylesheet" />
+<link href="modalextras.css" rel="stylesheet" />
+
+<body>
+  <!--<div class="modal_items">
+                                <div class="itemAgregado1">
+                                    <img src="../images/Categorias/PARRILLAS/menu1/1.png" class="img-item-Pedido">
+                                    <strong class="btn-quitaritem">QUITAR</strong>
+                                </div>
+                                <div class="itemAgregado2">
+                                    <div class="itemAgregado2">
+                                        <div class="Deta-Item">
+                                            <span><strong>Beef con Vegetales</strong></span>
+                                            <p>(Acotaciones)</p>
+                                            <p><span><strong>2x</strong></span> $13.000 = $26.000
+                                            </p>
+                                            <p>
+                                                <strong>Extras</strong> = $3.000
+                                            </p>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                        </div>
+                      -->
+
+    <button onclick="OpenPedido()" id="BtnAbrirPedidos" title="Go to top" >
+        <img src="../images/menu.png" > <br> Mi Pedido</button>
+
+
+        <div id="modalPed" class="modalPed">
+          <div class="flexSideBar" id="flexSideBar">
+            <div id="modalPedidosId" class="modalPedidos">
+                    <div class="cabecero_modal_pedidos" id="cabecero_modal_pedidos">
+                        <img src="../images/menu.png" width="24"><span class="tit-pedido"><strong>Tu Pedido</strong></span>
+                    </div>
+                    <hr>
+                    <div class="moda_contenido_pedidos" id="moda_contenido_pedidos">
+                    </div>
+                    <div class="footer-sidebar" id="footer-sidebar">
+                        <hr>
+                        <p>
+                            <strong id="Subtotal">SubTotal: $0</strong>
+                        </p>
+                        <p><span>Toca en "Finalizar Pedido" para hacerlo llegar</span></p>
+                        <a href="#" class="finaPedido_btn">Finalizar Pedido</a><p></p>
+                        <a href="#" class="seguirAgregando" name="seguirAgregando" onclick="closeNav();">Seguir Agregando</a>
+                    </div>
+                    
+                    
+                  
+            </div>
+          </div>  
+        </div> 
+          
+      
+
+        <!--<div id="miModal" class="modal">
+                <div class="flex" id="flex">
+                  <div class="contenido-modal">
+                        <div class="modal-header flex">
+                      
+                      <p style="margin-left: 160px;" style=" font-size:35px;"></p>
+            
+                      <span class="close" id="close">&times;</span>
+                    </div>
+                    
+                    <div class="modal-body">
+                      <p><strong>$13.000</strong></p>
+                      
+                      <p>Proteina Baby Beff 300gr sazonada con salsa especial de ajo, tomillo, laurel y pimenton. Zanahorias, Cebollas. Incluye tambien: papas en rodajas</p>     
+                      <p>
+                        <strong>Añadir Extras</strong>
+                        <br>
+                        <img src="../images/mas.png" class="imganadiextra" title="Añadir Extras">
+                      </p>
+                      <p><input type="text" placeholder="Añade Acotaciones" class="iptAnadirExtra"></p>
+                      <p>
+                        <img src="../images/menossolo.png" class="imgmenos" title="Restar Plato" onclick="CambiaCantidadPlato('menos');">
+                        <input onkeypress="return isNumberKey(event)" class="inputcanti" id="inputcanti" value="1" maxlength="2" >
+                        <img src="../images/massolo.png" class="imgmas" title="Sumar Plato" onclick="CambiaCantidadPlato('mas');">
+                      </p>
+                      <p>
+                          <a href="#" class="btnaddPlato"><img src="../images/menu.png" width="14"> Añadir al Pedido ($13.000)</a>
+                      </p>
+                      
+
+
+                    </div>
+                    <div class="footer">
+                            <a href="#" class="modalbtnWs">Pregunta Por <img src="../images/icows.png" width="14"></a>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+
+
+
+
+    <h1>modal</h1>
+    <div>
+        <a href="#" class="btnMenuPlato" onclick="CargarPlato(this);" id="plato123">Ver Plato</a>
+    </div>-->
+
+
+
+
+
+
+
+
+    <h1>Plato1 </h1>
+    <div>
+        <a href="#" name="plato1" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato1">Ver Plato</a>
+    </div>
+    <h1>___</h1>
+    <div style="height: 450px;">
+      espace
+    </div>
+    <h1>Plato2 </h1>
+    <div>
+        <a href="#" name="plato2" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato2">Ver Plato</a>
+    </div>
+    <h1>___</h1>
+    <div style="height: 450px;">
+      espace
+    </div>
+    <h1>Plato3 </h1>
+    <div>
+        <a href="#" name="plato3" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato3">Ver Plato</a>
+    </div>
+    <h1>___</h1>
+    <div style="height: 450px;">
+      espace
+    </div>
+    <h1>Plato4 </h1>
+    <div>
+        <a href="#" name="plato4" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato4">Ver Plato</a>
+    </div>
+
+    <div id="mimodalPlato" class="modalPlato">
+      <div class="flexdos" id="flexdos">
+        <div class="contenido-modaldos">
+              <div class="modal-headerdos flexdos" id="modal-headerdos">
+            
+            <p style="margin-left: 160px;" style=" font-size:35px;"></p>
+  
+            <span class="closedos" id="closedos">&times;</span>
+          </div>
+          
+          <div class="modal-bodydos">
+            <p><strong id="precioModalPlato"></strong></p>
+            
+            <p id="DescripPlato"></p>     
+            <p>
+              <strong>Añadir Extras</strong>
+              <br>
+              <img src="../images/mas.png" class="imganadiextra" title="Añadir Extras" onclick="abreModalExtras();">
+              <br>
+              <span id="extrasAgg" class="extrasAgg">
+                <!--<span id="msg_extra1">asdad<br></span>
+                
+                <span id="msg_extra2">asdadads<br></span>
+                <span id="msg_extra3"></span>-->
+              </span>
+              
+            </p>
+            <p><input type="text" placeholder="Añade Acotaciones" class="iptAnadirExtra"></p>
+            <p>
+              <img src="../images/menossolo.png" class="imgmenos" title="Restar Plato" onclick="CambiaCantidadPlato('menos');">
+              <input onkeypress="return isNumberKey(event)" class="inputcanti" id="inputcantidos" value="1" maxlength="2" >
+              <img src="../images/massolo.png" class="imgmas" title="Sumar Plato" onclick="CambiaCantidadPlato('mas');">
+            </p>
+            <p>
+                <a href="#" class="btnaddPlato" onclick="AgregaPlatoalPedido();"><img src="../images/menu.png" width="14"><span id="btnaddPlato"></span> </a>
+            </p>
+            
+
+
+          </div>
+          <div class="footerdos">
+                  <a href="#" class="modalbtnWs">Pregunta Por <img src="../images/icows.png" width="14"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Modal pequeño que abre al hacer click en extras -->
+
+    <div id="mimodalExtras" class="modalExtras">
+      <div class="flexExtras" id="flexExtras">
+        <div class="contenido-modalExtras">
+          <div class="modal-headerExtras flexExtras" id="modal-headerExtras">
+            
+            <p class="titExtras">EXTRAS (Opcional)</p>
+  
+          </div>
+          
+          <div class="modal-bodyExtras">
+            
+            <p id="DescripExtra1"></p>  
+            <p id="DescripExtra2"></p>  
+            <p id="DescripExtra3"></p>  
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Fin del Modal de Extras-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    
+    <script type="text/javascript" src="modal2.js"></script>
+    <script type="text/javascript" src="sidebar.js"></script>
+    <script type="text/javascript" src="modalextras.js"></script>
+
+    <script type="text/javascript">
+ 
+      $(document).ready(function() {
+        $('a[href^="#"]').click(function() {
+          var destino = $(this.hash);
+          if (destino.length == 0) {
+            destino = $('a[name="' + this.hash.substr(1) + '"]');
+          }
+          if (destino.length == 0) {
+            destino = $('html');
+          }
+          //$('html, body').animate({ scrollTop: destino.offset().top }, 500);
+          return false;
+        });
+      });
+    </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+<!--<script type="text/javascript" src="modal.js"></script>-->
+</html>

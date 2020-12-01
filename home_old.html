@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<title>Restaurante</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0"><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<link href="css/footer.css" rel="stylesheet" />-->
+ <link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link href="css/piedepagina.css" rel="stylesheet" />
+<link href="css/main.css" rel="stylesheet" />
+<link href="css/categorias.css" rel="stylesheet" />
+<link href="css/Menus.css" rel="stylesheet" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<!-- estilos del modal de platos />-->
+<link href="css/modal2.css" rel="stylesheet" />
+<!-- estilos del modal de Extras />-->
+<link href="css/modalextras.css" rel="stylesheet" />
+<!-- estilos del modal Pedidos  />-->
+<link href="css/sidebar.css" rel="stylesheet" />
+
+
+<script>
+function enviar_formulario(){
+   document.formulario1.submit()
+}
+</script>
+
+
+
+
+<body>
+	<!-- modal aqui -->
+
+	 <div id="mimodalPlato" class="modalPlato">
+      <div class="flexdos" id="flexdos">
+        <div class="contenido-modaldos">
+              <div class="modal-headerdos flexdos" id="modal-headerdos">
+            
+            <p style="margin-left: 160px;" style=" font-size:35px;"></p>
+  
+            <span class="closedos" id="closedos">&times;</span>
+          </div>
+          
+          <div class="modal-bodydos">
+            <p><strong id="precioModalPlato"></strong></p>
+            
+            <p id="DescripPlato"></p>     
+            <p>
+              <strong>Añadir Extras</strong>
+              <br>
+			  <img src="images/mas.png" class="imganadiextra" title="Añadir Extras" onclick="abreModalExtras();">
+			  <br>
+              <span id="extrasAgg" class="extrasAgg">
+              </span>
+            </p>
+            <p><input type="text" placeholder="Añade Acotaciones" class="iptAnadirExtra"></p>
+            <p>
+              <img src="images/menossolo.png" class="imgmenos" title="Restar Plato" onclick="CambiaCantidadPlato('menos');">
+              <input onkeypress="return isNumberKey(event)" class="inputcanti" id="inputcantidos" value="1" maxlength="2" >
+              <img src="images/massolo.png" class="imgmas" title="Sumar Plato" onclick="CambiaCantidadPlato('mas');">
+            </p>
+            <p>
+                <a href="#" class="btnaddPlato" onclick="AgregaPlatoalPedido();"><img src="images/menu.png" width="14"><span id="btnaddPlato"></span> </a>
+                <input type="hidden" id="btnaddPlato2"  maxlength="50" >
+                <input type="hidden" id="btnaddPlato3"  maxlength="50" >
+            </p>
+            
+
+
+          </div>
+          <div class="footerdos">
+                  <a href="#" class="modalbtnWs">Pregunta Por <img src="images/icows.png" width="14"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- -->
+	
+	<!-- Modal pequeño que abre al hacer click en extras -->
+
+    <div id="mimodalExtras" class="modalExtras">
+		<div class="flexExtras" id="flexExtras">
+		  <div class="contenido-modalExtras">
+			<div class="modal-headerExtras flexExtras" id="modal-headerExtras">
+			  
+			  <p class="titExtras">EXTRAS (Opcional)</p>
+	
+			</div>
+			
+			<div class="modal-bodyExtras">
+			  
+			  <p id="DescripExtra1"></p>  
+			  <p id="DescripExtra2"></p>  
+			  <p id="DescripExtra3"></p>  
+			  
+			</div>
+		  </div>
+		</div>
+	  </div>
+  
+	  <!--Fin del Modal de Extras-->
+
+
+<!--Fin del Boton de Pedidos-->
+	  <button onclick="OpenPedido()" id="BtnAbrirPedidos" title="Go to top" >
+		<img src="images/menu.png" > <br> Mi Pedido</button>
+<!--Fin Boton-->
+
+<!--Modal del Pedido / Ordenes Pedidos que lleva -->
+
+<div id="modalPed" class="modalPed">
+	<form id="formulario1" name="formulario1" method="post" action="pago.php" target="_blank">
+	<div class="flexSideBar" id="flexSideBar">
+	  <div id="modalPedidosId" class="modalPedidos">
+	  	
+			  <div class="cabecero_modal_pedidos" id="cabecero_modal_pedidos">
+				  <img src="images/menu.png" width="24"><span class="tit-pedido"><strong>Tu Pedido</strong></span>
+			  </div>
+			  
+			  <hr>
+			  <div class="moda_contenido_pedidos" id="moda_contenido_pedidos">
+			  </div>
+			   <div class="moda_contenido_pedidos2" id="moda_contenido_pedidos2">
+			  </div>
+			  
+			  <div class="footer-sidebar" id="footer-sidebar">
+					<a href="#" class="seguirAgregando" name="seguirAgregando" onclick="closeNav();">Seguir Agregando</a>
+				  <hr>
+				  <p>
+					  <strong id="Subtotal">SubTotal: $0</strong>
+				  </p>
+				  <p><span>Toca en "Finalizar Pedido" para hacerlo llegar</span></p>
+				  <input name="button" type="hidden"  id="button4" value="Pedido" />
+				   <input name="button3" type="submit" class="finaPedido_btn" id="button3" value="Finalizar Pedido" /><p></p>
+				  	
+			  </div>
+			  
+			  
+			
+	  </div>
+	</div> 
+	</form> 
+  </div> 
+  
+  <!--Fin Modal-->
+<section class="SecUno">
+
+	<div class="sec1">
+		Logo <br>
+		Aqui
+	</div>
+
+	<div class="parrafolema">
+		<span class="textoparra" >
+			Agregar en este parrafo un lema que describe la forma interesante, los beneficios y las diferencias de la gastronomia del restaurante.
+		</span>
+		
+	</div>
+		<a class="btn-uno" href="#ContenedorSec2">Ver Menú</a>
+	<!--<button class="btn-uno" href="#ContenedorSec2">Ver Menú</button>-->
+	
+
+	
+</section>
+
+<section> 
+	<div class="ContenedorSec2">
+		<div class="SecPasta" id="SecPasta" onclick="DespliegaMenu(this);">
+			<div class="divNameCat">
+					<span class="nameCat"> Pastas </span><br>
+			</div>
+			<div class="boxImgFlecha">
+					<span class="animated infinite bounce">
+				<img src="./images/descargando.png" class="flechaBajo" >
+			</span>
+			</div>
+			
+		</div>
+		<hr>
+		<div id="MenuPasta" style="display: none">
+			<div class="container" >
+				<div class="row justify-content-md-center">
+				  <div class="col" id="col11">
+					<img src="./images/Categorias/PASTAS/menu1/1.png" class="menu-imagen" >
+					<span>$13.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato5" >Ver Plato</a>
+				  </div>
+				  <div class="vl"></div>
+				  <div class="col"  id="col11">
+					<img src="./images/Categorias/PASTAS/menu2/2.png" class="menu-imagen" >
+					<span>$10.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato6" >Ver Plato</a>
+				  </div>
+				</div>
+				<div class="row"  id="col11">
+					<div class="col" id="col11">
+						<img src="./images/Categorias/PASTAS/menu3/3.png" class="menu-imagen" >
+						<span>$15.000</span>
+						<br>
+						<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato7" >Ver Plato</a>
+					</div>
+					<div class="vl"></div>
+					<div class="col"  id="col11">
+						<img src="./images/Categorias/PASTAS/menu3/3.png" class="menu-imagen" >
+						<span>$12.000</span>
+						<br>
+						<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato8" >Ver Plato</a>
+					</div>
+				  </div>
+			</div>
+		</div>
+
+
+
+
+		<!-- __________________________________________________________ -->
+			
+		<div class="SecParrillas" id="SecParrillas" onclick="DespliegaMenu(this);">
+			<div class="divNameCat">
+					<span class="nameCat"> Parrillas </span><br>
+			</div>
+			<div class="boxImgFlecha">
+				<span class="animated infinite bounce">
+				<img src="./images/descargando.png"  class="flechaBajo" >
+				</span>
+			</div>
+			
+		</div>
+		<hr>
+
+		<div id="MenuParrilla" style="display: none">
+			<div class="container" >
+				<div class="row justify-content-md-center">
+				  <div class="col" id="col11">
+					<img src="./images/Categorias/PARRILLAS/menu1/1.png" class="menu-imagen" >
+					<span>$13.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato1" >Ver Plato</a>
+				  </div>
+				  <div class="vl"></div>
+				  <div class="col"  id="col11">
+					<img src="./images/Categorias/PARRILLAS/menu2/2.png" class="menu-imagen" >
+					<span>$10.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato2" >Ver Plato</a>
+				  </div>
+				</div>
+				<div class="row"  id="col11">
+					<div class="col" id="col11">
+						<img src="./images/Categorias/PARRILLAS/menu3/3.png" class="menu-imagen" >
+						<span>$15.000</span>
+						<br>
+						<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato3" >Ver Plato</a>
+					</div>
+					<div class="vl"></div>
+					<div class="col"  id="col11">
+						<img src="./images/Categorias/PARRILLAS/menu4/4.png" class="menu-imagen" >
+						<span>$12.000</span>
+						<br>
+						<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato4" >Ver Plato</a>
+					</div>
+				  </div>
+			</div>
+		</div>
+		<div class="SecHamburguesas" id="SecHamburguesas" onclick="DespliegaMenu(this);">
+			<div class="divNameCat">
+					<span class="nameCat"> Hamburguesas </span><br>
+			</div>
+			<div class="boxImgFlecha">
+					<span class="animated infinite bounce">
+				<img src="./images/descargando.png" class="flechaBajo" >
+			</span>
+			</div>
+			
+		</div>
+		<hr>
+
+
+		<!-- __________________________________________________________ -->
+
+
+
+		
+		<div id="MenuHamburguesas" style="display: none; background: blue" >
+			<div class="container" >
+				<div class="row justify-content-md-center">
+				  <div class="col" id="colHambur" >
+					<img src="./images/Categorias/HAMBURGUESAS/menu1/1.png" class="menu-imagen" >
+					<span>$13.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato9" >Ver Plato</a>
+				  </div>
+				  <div class="vl"></div>
+				  <div class="col"  id="col11">
+					<img src="./images/Categorias/HAMBURGUESAS/menu2/2.png" class="menu-imagen" >
+					<span>$10.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato10" >Ver Plato</a>
+				  </div>
+				</div>
+				<div class="row"  id="col11">
+					<div class="col" id="col11">
+						<img src="./images/Categorias/HAMBURGUESAS/menu3/3.png" class="menu-imagen" >
+					<span>$15.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato11" >Ver Plato</a>
+					</div>
+					<div class="vl"></div>
+					<div class="col"  id="col11">
+						<img src="./images/Categorias/HAMBURGUESAS/menu4/4.png" class="menu-imagen" >
+					<span>$12.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato12" >Ver Plato</a>
+					</div>
+				  </div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="SecMazorcadas" id="SecMazorcadas" onclick="DespliegaMenu(this);">
+			<div class="divNameCat">
+					<span class="nameCat"> Mazorcadas </span><br>
+			</div>
+			<div class="boxImgFlecha">
+					<span class="animated infinite bounce">
+				<img src="./images/descargando.png" class="flechaBajo" >
+			</span>
+			</div>
+			
+		</div>
+		<hr>
+		<div id="MenuMazorcadas" style="display: none; background: blue" >
+			<div class="container" >
+				<div class="row justify-content-md-center">
+				  <div class="col" id="colHambur" >
+					<img src="./images/Categorias/MAZORCADAS/menu1/1.png" class="menu-imagen" >
+					<span>$13.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato13" >Ver Plato</a>
+				  </div>
+				  <div class="vl"></div>
+				  <div class="col"  id="col11">
+					<img src="./images/Categorias/MAZORCADAS/menu2/2.png" class="menu-imagen" >
+					<span>$10.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato14" >Ver Plato</a>
+				  </div>
+				</div>
+				<div class="row"  id="col11">
+					<div class="col" id="col11">
+						<img src="./images/Categorias/MAZORCADAS/menu3/3.png" class="menu-imagen" >
+					<span>$15.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato15" >Ver Plato</a>
+					</div>
+					<div class="vl"></div>
+					<div class="col"  id="col11">
+						<img src="./images/Categorias/MAZORCADAS/menu4/4.png" class="menu-imagen" >
+					<span>$12.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato16" >Ver Plato</a>
+					</div>
+				  </div>
+			</div>
+		</div>
+		<div class="SecEnsaladas" id="SecEnsaladas" onclick="DespliegaMenu(this);">
+			<div class="divNameCat">
+					<span class="nameCat"> Ensaladas </span><br>
+			</div>
+			<div class="boxImgFlecha">
+					<span class="animated infinite bounce">
+				<img src="./images/descargando.png" class="flechaBajo" >
+			</span>
+			</div>
+			
+		</div>
+		<hr>
+
+		<div id="MenuEnsaladas" style="display: none; background: blue" >
+			<div class="container" >
+				<div class="row justify-content-md-center">
+				  <div class="col" id="colHambur" >
+					<img src="./images/Categorias/ENSALADAS/menu1/1.png" class="menu-imagen" >
+					<span>$13.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato17" >Ver Plato</a>
+				  </div>
+				  <div class="vl"></div>
+				  <div class="col"  id="col11">
+					<img src="./images/Categorias/ENSALADAS/menu2/2.png" class="menu-imagen" >
+					<span>$10.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato18" >Ver Plato</a>
+				  </div>
+				</div>
+				<div class="row"  id="col11">
+					<div class="col" id="col11">
+						<img src="./images/Categorias/ENSALADAS/menu3/3.png" class="menu-imagen" >
+					<span>$15.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato19" >Ver Plato</a>
+					</div>
+					<div class="vl"></div>
+					<div class="col"  id="col11">
+						<img src="./images/Categorias/ENSALADAS/menu4/4.png" class="menu-imagen" >
+					<span>$12.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato20" >Ver Plato</a>
+					</div>
+				  </div>
+			</div>
+		</div>
+	
+		<div class="SecPostres" id="SecPostres" onclick="DespliegaMenu(this);">
+			<div class="divNameCat">
+					<span class="nameCat"> Postres </span><br>
+			</div>
+			<div class="boxImgFlecha">
+					<span class="animated infinite bounce">
+				<img src="./images/descargando.png" class="flechaBajo" >
+			</span>
+			</div>
+			
+		</div>
+		<hr>
+		<div id="MenuPostres" style="display: none; background: blue" >
+			<div class="container" >
+				<div class="row justify-content-md-center">
+				  <div class="col" id="colHambur" >
+					<img src="./images/Categorias/POSTRES/menu1/1.png" class="menu-imagen" >
+					<span>$13.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato21" >Ver Plato</a>
+				  </div>
+				  <div class="vl"></div>
+				  <div class="col"  id="col11">
+					<img src="./images/Categorias/POSTRES/menu2/2.png" class="menu-imagen" >
+					<span>$10.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato22" >Ver Plato</a>
+				  </div>
+				</div>
+				<div class="row"  id="col11">
+					<div class="col" id="col11">
+						<img src="./images/Categorias/POSTRES/menu3/3.png" class="menu-imagen" >
+					<span>$15.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato23" >Ver Plato</a>
+					</div>
+					<div class="vl"></div>
+					<div class="col"  id="col11">
+						<img src="./images/Categorias/POSTRES/menu4/4.png" class="menu-imagen" >
+					<span>$12.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato24" >Ver Plato</a>
+					</div>
+				  </div>
+			</div>
+		</div>
+			<div class="SecBebidas" id="SecBebidas" onclick="DespliegaMenu(this);">
+			<div class="divNameCat">
+					<span class="nameCat"> Bebidas </span><br>
+			</div>
+			<div class="boxImgFlecha">
+					<span class="animated infinite bounce">
+				<img src="./images/descargando.png" class="flechaBajo" >
+			</span>
+			</div>
+			
+		</div>
+		<div id="MenuBebidas" style="display: none; background: blue" >
+			<div class="container" >
+				<div class="row justify-content-md-center">
+				  <div class="col" id="colHambur" >
+					<img src="./images/Categorias/BEBIDAS/menu1/1.png" class="menu-imagen" >
+					<span>$13.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato25" >Ver Plato</a>
+				  </div>
+				  <div class="vl"></div>
+				  <div class="col"  id="col11">
+					<img src="./images/Categorias/BEBIDAS/menu2/2.png" class="menu-imagen" >
+					<span>$10.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato26" >Ver Plato</a>
+				  </div>
+				</div>
+				<div class="row"  id="col11">
+					<div class="col" id="col11">
+						<img src="./images/Categorias/BEBIDAS/menu3/3.png" class="menu-imagen" >
+					<span>$15.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato27" >Ver Plato</a>
+					</div>
+					<div class="vl"></div>
+					<div class="col"  id="col11">
+						<img src="./images/Categorias/BEBIDAS/menu4/4.png" class="menu-imagen" >
+					<span>$12.000</span>
+					<br>
+					<a href="#" class="btnMenuPlato" onclick="CargarPlato2(this);" id="plato28" >Ver Plato</a>
+					</div>
+				  </div>
+			</div>
+		</div>
+	</div>
+	
+	
+</section>
+
+    <div class="Burger_President_area" style="z-index: 3;">
+            <div class="Burger_President_here">
+                <div class="single_Burger_President">
+                    <div class="room_thumb">
+                        <img src="images/burgers/1.png" alt="">
+                        <div class="room_heading d-flex justify-content-between align-items-center">
+                            <div class="room_heading_inner">
+                                <span>$20</span>
+                                <h3>Promocion 1</h3>
+                                <p>Descripción promocion 1.</p>
+                                <a href="#" class="boxed-btn3">Agregar</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="single_Burger_President">
+                    <div class="room_thumb">
+                        <img src="images/burgers/2.png" alt="">
+                        <div class="room_heading d-flex justify-content-between align-items-center">
+                            <div class="room_heading_inner">
+                                <span>$20</span>
+                                <h3>Promocion 2</h3>
+                                <p>Descripción promocion 2.</p>
+                                <a href="#" class="boxed-btn3">Agregar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <div class="instragram_area">
+    	<span><h1 class="sec1a">Instagram Post</h1></span>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="single_instagram">
+                    <img src="images/instragram/1.png" alt="">
+                    <div class="ovrelay">
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single_instagram">
+                    <img src="images/instragram/2.png" alt="">
+                    <div class="ovrelay">
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single_instagram">
+                    <img src="images/instragram/3.png" alt="">
+                    <div class="ovrelay">
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single_instagram">
+                    <img src="images/instragram/4.png" alt="">
+                    <div class="ovrelay">
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+<section class="PieDePagina">
+    <div class="container">
+        <div class="row p-2">
+            <div class="col-4 text-center p-0"> 
+                <div class="logoaqui">
+                   <span class="palalogo">
+                        LOGO
+                   </span> 
+                    <br>
+                    Aqui
+                </div>
+            </div>
+            <div class="col-8 text-left p-0"> 
+                <div class="HorarioFooter">
+                     Horario de Atencion<br>
+                    Lun - Sabádo: 11:00 am - 11:00 pm<br>
+                    Domingos: 12:00 am - 10:00 pm
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row p-2" >
+                <div class="col-4 text-right p-0" > 
+                </div>
+                <div class="col-8 text-left p-0" style="float: left">  
+                	<div class="col-md-12">
+                  <div class="mu-footer-area">
+           <div class="mu-footer-social">
+            <a href="#"><span class="fa fa-facebook"></span></a>
+            <a href="#"><span class="fa fa-twitter"></span></a>
+            <a href="#"><span class="fa fa-instagram"></span></a>
+            <a href="#"><span class="fa fa-pinterest"></span></a>
+            <a href="#"><span class="fa fa-youtube"></span></a>
+          </div>
+      </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Start Map section -->
+  <section id="mu-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63654.14522813766!2d-74.41934900269342!3d4.338789328931217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f04f7770f3b97%3A0x90b173ecbe09c570!2sFusagasug%C3%A1%2C%20Cundinamarca%2C%20Colombia!5e0!3m2!1ses!2sve!4v1597523765380!5m2!1ses!2sve" width="100%" height="100%" frameborder="0"allowfullscreen></iframe>
+  </section>
+  <!-- End Map section -->
+
+<footer>
+   
+    <div class="container">
+        <div class="row p-2">
+            <div class="col text-center p-0"> 
+                <div class="titrow2">
+                        ¿Deseas Integrar y adaptar <br>
+                        un Menú Digital E-Commerce a tu Restaurante?
+                </div>
+                <div class="subtrow2">
+                    Para obtener información acerca de <br>
+                    funcionamiento, objetivos y tarifas,<br>
+                    ¡Ponte en contacto con nosotros!
+                </div>
+                    
+            </div>    
+        </div>
+    </div>
+	
+    <div class="container">
+		<div class="row p-2">
+            <div class="col text-center p-0" >
+                <img src="images/icotelefono.png" class="imgicofooter" >
+                <br>
+                <div class="txt_icotel">
+                    314 788 1245 <br>
+                    Hacer Llamada
+                </div>    
+                
+            </div>
+            <div class="col text-center p-0">
+                <img src="images/icows.png" class="imgicofooter" >
+                <br>
+                <div class="txt_icotel">
+                    Enviar <br>
+                    Whatsapp
+                </div> 
+            </div>
+            <div class="col text-center p-0">
+                <img src="images/icoface.png" class="imgicofooter" >
+                <br>
+                <div class="txt_icotel">
+                    Enviar <br>
+                    Mensaje
+                </div> 
+            </div>
+        </div>
+	</div>
+	 <div class="container">
+        <div class="row p-2">
+            <div class="col text-center p-0"> 
+                <div class="titrow2" style="color: #630671">
+                        Diseño y Desarrollo
+                </div>
+                <div class="subtrow2">
+                		
+		
+                    <img class="animated infinite rubberBand" src="images/logodimensio.png">
+               
+                </div>
+                    
+            </div>    
+        </div>
+    </div>
+
+</footer>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content" >
+  		 <span class="close">&times;</span>
+	    <p class="PModal" >Las imagenes y colores presentados funcionan como ejemplo.<br>
+	    Se anexan Logo y Colores Corportativos del Restaurante</p>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/depliegaMenu.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/modal2.js"></script>
+<script type="text/javascript" src="js/modalextras.js"></script>
+<script type="text/javascript" src="js/sidebar.js"></script>
+<script type="text/javascript">
+      $(document).ready(function() {
+        $('a[href^="#"]').click(function() {
+          //console.log("aqui");
+          return false;
+        });
+      });
+      </script>
+</body>
+</html>

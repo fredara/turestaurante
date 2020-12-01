@@ -1,0 +1,228 @@
+
+body{
+	margin: 0px;
+	font-family: 'Maiandra GD Black';
+}
+.PieDePagina{
+	background-color: #F1B206;
+	height: auto;
+	color: #ffff;
+}
+.col{
+    padding: 0px;
+}
+
+
+
+
+
+
+
+.imgicofooter{
+    width: 35px;
+}
+.txt_icotel{
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 4px;
+    color: #ffff;
+
+}
+.titrow2{
+    font-size: 20px;
+    font-weight: bold;
+    color:#fff;
+}
+.subtrow2{
+    font-size: 18px;
+    color: #ffff;
+    font-weight: normal;
+}
+.subtrow2 img {
+    width: 300px;
+    height: 120px;
+}
+.logoaqui{
+    font-size: 25px;
+    font-weight: bold;
+}
+.palalogo{
+    font-size: 51px;
+    font-weight: bold;
+}
+.HorarioFooter{
+    font-size: 22px;
+    padding-top: 14px;
+    text-align: left;
+    padding-left: 17px;
+    padding-right: 20px;
+}
+.imglogofb{
+    width: 55px;;
+}
+.txtladofb{
+    font-size: 20px;
+    padding-left: 17px;
+    color: #ffff;
+}
+@media screen and (max-width: 1024px) and (min-width: 769px){
+}
+@media screen and (max-width: 768px) and (min-width: 426px){
+    .imglogofb{
+        width: 55px;
+    }
+    .HorarioFooter{
+        font-size: 20px;
+    }
+    .palalogo{
+        font-size: 57px;
+    }
+    .txtladofb{
+        font-size: 20px;
+    }
+    .titrow2{
+        font-size: 30px;
+    }
+    .subtrow2{
+        font-size: 25px;
+    }
+    .subtrow2 img {
+    width: 120px;
+    height: 60px;
+}
+    .imgicofooter{
+        width: 55px;
+    }
+    .txt_icotel{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 376px){
+    .imgicofooter{
+        width: 30px;
+    }
+    .txt_icotel{
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 4px;
+    }
+    .titrow2{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .subtrow2{
+        font-size: 16px;
+    }
+        .subtrow2 img {
+    width: 120px;
+    height: 60px;
+}
+    .logoaqui{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .palalogo{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .HorarioFooter{
+        font-size: 13px;
+        padding-top: 14px;
+        text-align: left;
+        padding-left: 17px;
+        padding-right: 20px;
+    }
+    .imglogofb{
+        width: 24px;
+    }
+    .txtladofb{
+        font-size: 13px;
+        padding-left: 17px;
+    }
+}
+@media screen and (max-width: 375px) and (min-width: 321px){
+    .imgicofooter{
+        width: 30px;
+    }
+    .txt_icotel{
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 4px;
+    }
+    .titrow2{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .subtrow2{
+        font-size: 16px;
+    }
+        .subtrow2 img {
+    width: 120px;
+    height: 60px;
+}
+    .logoaqui{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .palalogo{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .HorarioFooter{
+        font-size: 13px;
+        padding-top: 14px;
+        text-align: left;
+        padding-left: 17px;
+        padding-right: 20px;
+    }
+    .imglogofb{
+        width: 24px;
+    }
+    .txtladofb{
+        font-size: 13px;
+        padding-left: 17px;
+    }
+}
+@media screen and (max-width: 320px){
+    .imgicofooter{
+        width: 30px;
+    }
+    .txt_icotel{
+        font-size: 12px;
+        font-weight: bold;
+        padding-top: 4px;
+    }
+    .titrow2{
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .subtrow2{
+        font-size: 12px;
+    }
+        .subtrow2 img {
+    width: 120px;
+    height: 60px;
+}
+    .logoaqui{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .palalogo{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .HorarioFooter{
+        font-size: 11px;
+        padding-top: 14px;
+        text-align: left;
+        padding-left: 17px;
+        padding-right: 20px;
+    }
+    .imglogofb{
+        width: 24px;
+    }
+    .txtladofb{
+        font-size: 11px;
+        padding-left: 17px;
+    }
+}

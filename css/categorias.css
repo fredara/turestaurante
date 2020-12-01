@@ -1,0 +1,249 @@
+.ContenedorSec2{
+	background-color: rgb(240, 177, 7);
+	cursor: pointer;
+}
+
+.ContenedorSec2 hr{
+	height: 5px;
+  	width: 80%;
+  	background-color: #A4873A;
+ 	margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: rgb(240, 177, 7) 1px 0px 0px, rgb(240, 177, 7) 0.540302px 0.841471px 0px, rgb(240, 177, 7) -0.416147px 0.909297px 0px, rgb(240, 177, 7) -0.989992px 0.14112px 0px, rgb(240, 177, 7) -0.653644px -0.756802px 0px, rgb(240, 177, 7) 0.283662px -0.958924px 0px, rgb(240, 177, 7) 0.96017px -0.279415px 0px; ;
+}
+ @media screen and (max-width:480px) {
+	.ContenedorSec2 hr{
+	height: 5px;
+  	width: 100%;
+  	background-color: #A4873A;
+ 	margin-top: 0;
+    margin-bottom: 0;
+}
+}
+.SecPasta{
+	background: url(../images/Categorias/PASTAS/768.png) no-repeat  center;
+	background-size: 80% 100%;
+	height: 150px;
+	width: 100%;
+}
+/*.SecPasta:hover{cursor: pointer;}*/
+.SecParrillas{
+	background: url(../images/Categorias/PARRILLAS/768\ PX.png) no-repeat center;
+
+	background-size: 80% 100%;	height: 150px;
+	width: 100%;
+}
+.SecHamburguesas{
+	background: url(../images/Categorias/HAMBURGUESAS/768\ PX.png) no-repeat center ;
+	background-size: 80% 100%;
+	height: 150px;
+	width: 100%;
+}
+.SecMazorcadas{
+	background: url(../images/Categorias/MAZORCADAS/768\ PX.png) no-repeat center ;
+	background-size: 80% 100%;
+	height: 150px;
+	width: 100%;
+}
+.SecEnsaladas{
+	background: url(../images/Categorias/ENSALADAS/768\ PX.png) no-repeat center ;
+	background-size: 80% 100%;
+	height: 150px;
+	width: 100%;
+}
+.SecPostres{
+	background: url(../images/Categorias/POSTRES/768\ PX.png) no-repeat center ;
+	background-size: 80% 100%;
+	height: 150px;
+	width: 100%;
+}
+.SecBebidas{
+	background: url(../images/Categorias/BEBIDAS/768\ PX.png) no-repeat center ;
+	background-size: 80% 100%;
+	height: 150px;
+	width: 100%;
+}
+.divNameCat{
+	padding: 2px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.nameCat{
+	color: #fff;
+	font-family: 'Maiandra GD Black';
+	font-size: 1.9em;
+	text-shadow: rgb(240, 177, 7) 1px 0px 0px, rgb(240, 177, 7) 0.540302px 0.841471px 0px, rgb(240, 177, 7) -0.416147px 0.909297px 0px, rgb(240, 177, 7) -0.989992px 0.14112px 0px, rgb(240, 177, 7) -0.653644px -0.756802px 0px, rgb(240, 177, 7) 0.283662px -0.958924px 0px, rgb(240, 177, 7) 0.96017px -0.279415px 0px; ;
+}
+
+@media screen and (max-width:480px) {
+	.boxImgFlecha{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	}
+}
+.boxImgFlecha{
+	padding-top: 40px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flechaBajo{
+	align-content: center;
+	height: 40px;
+}
+.flechaBajo :hover{
+	-webkit-transition: all 0.5s 0s ease;
+	-moz-transition: all 0.5s 0s ease;
+	-o-transition: all 0.5s 0s ease;
+	transition: all 0.5s 0s ease;
+}
+@media screen and (max-width:480px) {
+	.flechaBajo{
+	align-content: center;
+	height: 32px;
+	}
+}
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 1024px) and (min-width: 769px){
+}
+@media screen and (max-width: 768px) and (min-width: 426px){
+	
+}
+@media screen and (max-width: 425px) and (min-width: 376px){
+	.SecPasta{
+		background: url(../images/Categorias/PASTAS/425.png) no-repeat center ;
+		background-size: cover;
+		height: 130px;
+		width: 100%;
+	}
+	.SecParrillas{
+		background: url(../images/Categorias/PARRILLAS/425\ PX.png) no-repeat center;
+		background-size: cover;
+		height: 130px;
+		width: 100%;
+	}
+	.SecHamburguesas{
+		background: url(../images/Categorias/HAMBURGUESAS/425\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 130px;
+		width: 100%;
+	}
+	.SecMazorcadas{
+		background: url(../images/Categorias/MAZORCADAS/425\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 130px;
+		width: 100%;
+	}
+	.SecEnsaladas{
+		background: url(../images/Categorias/ENSALADAS/425\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 130px;
+		width: 100%;
+	}
+	.SecPostres{
+		background: url(../images/Categorias/POSTRES/425\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 130px;
+		width: 100%;
+	}
+	.SecBebidas{
+		background: url(../images/Categorias/BEBIDAS/425\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 130px;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 375px) and (min-width: 321px){
+	.SecPasta{
+		background: url(../images/Categorias/PASTAS/375\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecParrillas{
+		background: url(../images/Categorias/PARRILLAS/375\ PX.png) no-repeat center;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecHamburguesas{
+		background: url(../images/Categorias/HAMBURGUESAS/375\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecMazorcadas{
+		background: url(../images/Categorias/MAZORCADAS/375\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecEnsaladas{
+		background: url(../images/Categorias/ENSALADAS/375\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecPostres{
+		background: url(../images/Categorias/POSTRES/375\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecBebidas{
+		background: url(../images/Categorias/BEBIDAS/375\ PX.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 320px){
+	.SecPasta{
+		background: url(../images/Categorias/PASTAS/320.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecParrillas{
+		background: url(../images/Categorias/PARRILLAS/325.png) no-repeat center;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecHamburguesas{
+		background: url(../images/Categorias/HAMBURGUESAS/325.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecMazorcadas{
+		background: url(../images/Categorias/MAZORCADAS/325.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecEnsaladas{
+		background: url(../images/Categorias/ENSALADAS/325.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecPostres{
+		background: url(../images/Categorias/POSTRES/325.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+	.SecBebidas{
+		background: url(../images/Categorias/BEBIDAS/325.png) no-repeat center ;
+		background-size: cover;
+		height: 120px;
+		width: 100%;
+	}
+}
+ 

@@ -1,0 +1,280 @@
+.btnMenuPlato{
+    font-size: 12px;
+    color: rgb(240, 177, 7);
+    background-color: #ff4;
+    font-family: 'Maiandra GD Black';
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	padding:2px 11px;
+	text-decoration:none;
+}
+
+.btnMenuPlato:active {
+	position:relative;
+	top:1px;
+}
+.btnMenuPlato:hover{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.btnaddPlato {
+	background:linear-gradient(to bottom, #fff 5%, #fff 100%);
+	background-color:#fff;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#f0b207;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffbb00;
+}
+.btnaddPlato:hover {
+	background:linear-gradient(to bottom, #e78b12 5%, #e78b12 100%);
+  background-color:#e78b12;
+  color:#ffffff;
+  text-decoration:none;
+}
+.btnaddPlato:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.modalbtnWs {
+	background-color:#44c767;
+	-webkit-border-radius:28px;
+	-moz-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:4px 40px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+    text-decoration: none;
+}
+.modalbtnWs:hover {
+    background-color:#5cbf2a;
+    text-decoration: none;
+    color: #14120a;
+}
+.modalbtnWs:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modalPlato{
+    display: none;
+    position: fixed;
+    z-index:1;
+    overflow: auto;
+    left: 0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.041);
+    
+}
+
+.flexdos{
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.closedos{
+    color: #fff;
+    font-size:30px;
+    font-weight: bold;
+    margin: 0px !important;
+    padding: 5px !important;
+    opacity: 7.5;;
+  
+    position: absolute;
+    right: 0;
+    top: 0
+}
+.closedos:hover{
+    color:#7f8c8d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-headerdos{
+    padding: 27% 1px;
+    border: none !important;
+    /*background-image: url(../images/Categorias/PARRILLAS/menu1/1.png) !important;*/
+    background-size: cover;
+    border-radius: 20px 20px 0px 0px !important;
+}
+
+.contenido-modaldos{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    width: 32%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+    animation-name: modal;
+    animation-duration: 1s;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.footerdos{
+    padding: 10px 16px;
+    color:green;
+    text-align: center;
+    border-radius: 0px 0px 20px 20px !important;
+    background-color: #f0b107;
+}
+
+.modal-bodydos{
+    padding: 1px 16px;
+    background-color: #f0b107;
+    color: #ffffff;
+        
+        position: relative;
+        -webkit-box-flex: 1;
+        flex: 1 1 auto;
+}
+
+
+.imganadiextra{
+    margin-top: -16px;
+    width: 16px;
+}
+.imganadiextra:hover{
+    margin-top: -13px;
+    width: 19px;
+    cursor: pointer;
+}
+.imgmenos{
+    margin-right: 3px;
+    width: 14px;
+  }
+  .imgmenos:hover{
+    margin-right: 5px;
+    height: 16px;
+    cursor: pointer;
+  
+  }
+  .imgmas{
+    margin-left: 3px;
+    width: 14px;
+  }
+  .imgmas:hover{
+    margin-right: 5px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  .iptAnadirExtra{
+    text-align: center;
+    width: 100%;
+  }
+
+  .inputcanti{
+    background-color: #f0b207;
+    text-align:center;
+    padding:4px;
+    font-size:15px;
+    border-color:#ffffff;
+    color:#ffffff;
+    border-width:2px;
+    border-style:solid;
+    width: 11%;
+  }
+
+@media screen and (max-width:900px){
+    .contenido-modaldos{
+      width: 70%;
+    }
+    .textos{
+      padding: 150px;
+    }
+    .modalbtnWs{
+      font-size: 12px;
+      padding: 5px 16px;
+  }
+}
+@media screen and (max-width:500px){
+    .textos{
+      padding:50px;
+    }
+    .modalbtnWs{
+        font-size: 12px;
+        padding: 2px 13px;
+    }
+    .btnaddPlato{
+      font-size: 15px;
+      padding: 6px 17px;
+    }
+  }
+@media screen and (max-width:360px){
+    .btnaddPlato{
+        font-size: 11px;
+        padding: 6px 33px;
+    }
+}
+.contenido-modaldos{
+    border-radius: 20px 20px 20px 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+} 
