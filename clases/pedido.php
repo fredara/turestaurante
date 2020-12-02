@@ -225,9 +225,9 @@ class Pedidos{
         return $err;
     }
 
-    function addPedidoDetalle($cod_pedido, $descrip, $cantidadxprecio) {
+    function addPedidoDetalle($cod_pedido, $cantidad, $descrip, $cantidadxprecio) {
         $err="OK";	
-        $query="INSERT INTO tbl_pedido_detalle (cod_pedido, descrip, cantidadxprecio, fregistro) values ('$cod_pedido', '$descrip', '$cantidadxprecio', '".date('Y-m-d H:i:s')."')";
+        $query="INSERT INTO tbl_pedido_detalle (cod_pedido, descrip, cantidad, cantidadxprecio, fregistro) values ('$cod_pedido', '$descrip', '$cantidad', '$cantidadxprecio', '".date('Y-m-d H:i:s')."')";
         $con=@mysqli_connect($this->varhost,$this->varlogin,$this->varpass,$this->vardb);
         @mysqli_select_db($con,$this->vardb);
         $rs=@mysqli_query($con,$query);

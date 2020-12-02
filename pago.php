@@ -5,7 +5,7 @@ extract($_REQUEST);
 
   ?>
 <!doctype html>
-<html class="no-js" lang="">
+    <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -84,13 +84,12 @@ extract($_REQUEST);
           }
         }
         
-        console.log(descrip);
+        //console.log(descrip);
         
         var operacion = 'gdp';
         
-        if(true) {
-          console.log("nombre: ", nombre);
-          console.log("apellido: ",apellido);
+        if(nombre!='' && apellido!='' && selecDirec!='' && direccion!='' && nroDirec!='' && direcEspe!='' && barrio!='' && tipoDirec!='' && indicacion!='' && telefono!='' && correo!='') {
+          //console.log("tiene todos los datos entra");
           $.get("controlador/pedido.controller.php",
             { 
               operacion: operacion, 
@@ -108,7 +107,12 @@ extract($_REQUEST);
               efectivo: efectivo,
               bancoConsig: bancoConsig,
               nequi: nequi,
-
+              descrip: descrip,
+              cantidad: cantidad,
+              cantixpre: cantixpre,
+              descripcion_extra: descripcion_extra,
+              cantidad_extra: cantidad_extra,
+              cantxprecioExtra: cantxprecioExtra
              
 
 
@@ -117,13 +121,16 @@ extract($_REQUEST);
             },
             function(resultado){
                 console.log(resultado); 
-                
-                if(resultado.acc=='Guarda'){
+                if(resultado){
                   document.getElementById("mensajeModal").innerHTML = resultado.msg;
                   document.getElementById("Mensaje2Modal").innerHTML = resultado.msg;
                   modal.style.display = 'block';
 
-                  //setTimeout(function(){location.href="index.html";},5000);
+                  setTimeout(function(){location.href="index.html";},5000);
+                }else{
+                  document.getElementById("mensajeModal").innerHTML = "Error";
+                  document.getElementById("Mensaje2Modal").innerHTML = "Por Favor Contacte a Soporte";
+                  modal.style.display = 'block';
                 }
             },
             'json'

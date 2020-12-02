@@ -17,8 +17,6 @@ switch ($operacion){
                 $codigo_verificado = false;
             }
         }   
-            echo "asdada";
-        break;
         $resp = new stdClass();
         if(!empty($id_pedido) and  !empty($nombre) and !empty($apellido) and !empty($selecDirec) and !empty($direccion) and !empty($nroDirec) and !empty($direcEspe) and !empty($barrio) and !empty($tipoDirec) and !empty($indicacion) and !empty($telefono) and !empty($correo)  ){
 
@@ -35,7 +33,13 @@ switch ($operacion){
                 $i=count($descrip);
                 for ($j=0;$j<$i;$j++) {
                     $precioTotal = $precioTotal + $cantixpre[$j];
-                    $ped->addPedidoDetalle($ped->cod_pedido, $descrip[$j], $cantixpre[$j]);
+                    $ped->addPedidoDetalle($ped->cod_pedido, $descrip[$j], $cantidad[$j], $cantixpre[$j]);
+                }
+
+                $t=count($descripcion_extra);
+                for ($x=0;$x<$t;$x++) {
+                    $precioTotal = $precioTotal + $cantxprecioExtra[$x];
+                    $ped->addPedidoDetalle($ped->cod_pedido, $descripcion_extra[$x], $cantidad_extra[$x], $cantxprecioExtra[$x]);
                 }
 
                 $ped->modPedidoMontos($ped->cod_pedido, $precioTotal);
@@ -45,9 +49,6 @@ switch ($operacion){
                 $json = json_encode($resp);
                 echo $json;
             }
-            
-            
-
         }else{
             $resp->msg = "Faltan Datos Para Procesar";
             $resp->msg2 = "Por Favor Ingrese los datos";
