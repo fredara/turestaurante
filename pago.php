@@ -123,14 +123,16 @@ extract($_REQUEST);
                 console.log(resultado); 
                 if(resultado){
                   document.getElementById("mensajeModal").innerHTML = resultado.msg;
-                  document.getElementById("Mensaje2Modal").innerHTML = resultado.msg;
+                  document.getElementById("Mensaje2Modal").innerHTML = resultado.msg2;
                   modal.style.display = 'block'; 
 
-                  setTimeout(function(){location.href="index.html";},5000);
+                  setTimeout(function(){location.href="index.html";},3000);
+                  return false;
                 }else{
                   document.getElementById("mensajeModal").innerHTML = "Error";
                   document.getElementById("Mensaje2Modal").innerHTML = "Por Favor Contacte a Soporte";
                   modal.style.display = 'block';
+                  return false;
                 }
             },
             'json'
@@ -142,7 +144,13 @@ extract($_REQUEST);
           modal.style.display = 'block';
         }
         
-        
+        return false;
+      }
+
+      function blockSubmit(){
+        document.getElementById("button3").disabled = true;
+
+        guardaData();
       }
   </script>
 
@@ -193,7 +201,7 @@ extract($_REQUEST);
           <div class="col-md-3">
           </div>
           <div class="col-md-6 text-center">
-            <form>
+            <form onsubmit="return guardaData()">
            <!--<form action="controlador/pedido.controller.php" method="post" enctype="multipart/form-data" name="form1" id="form1">-->
               <div class="input-group">
                  <span style="color: #9f6f08;margin-top: 10px;font-size:21px;font-weight: bold;">Nombre:</span>
@@ -406,7 +414,7 @@ if (!empty($cod_producto_extra)) {
      <tr>
                    <td valign="top" colspan="3">
                  
-              <input name="button3" type="submit" class="finaPedido_btn" id="button3" value="Realizar Pedido" onclick="guardaData();" />
+              <input name="button3" type="submit" class="finaPedido_btn" id="button3" value="Realizar Pedido" onclick="blockSubmit();"  />
               <!--<input name="operacion" type="hidden" class="operacion" id="operacion" value="gdp" />-->
             </td>
 </tr>
@@ -474,6 +482,8 @@ window.addEventListener('click', function(e){
         modal.style.display = 'none';
     }
 });
+
+
 		
 </script>
 
