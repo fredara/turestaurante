@@ -40,7 +40,7 @@ switch ($operacion){
                 for ($x=0;$x<$t;$x++) {
                     $precioTotal = $precioTotal + $cantxprecioExtra[$x];
                     $ped->addPedidoDetalle($ped->cod_pedido, $descripcion_extra[$x], $cantidad_extra[$x], $cantxprecioExtra[$x]);
-                }
+                } 
 
                 $ped->modPedidoMontos($ped->cod_pedido, $precioTotal);
                 $resp->msg = "Pedido Registrado con Exito";

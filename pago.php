@@ -124,7 +124,7 @@ extract($_REQUEST);
                 if(resultado){
                   document.getElementById("mensajeModal").innerHTML = resultado.msg;
                   document.getElementById("Mensaje2Modal").innerHTML = resultado.msg;
-                  modal.style.display = 'block';
+                  modal.style.display = 'block'; 
 
                   setTimeout(function(){location.href="index.html";},5000);
                 }else{
